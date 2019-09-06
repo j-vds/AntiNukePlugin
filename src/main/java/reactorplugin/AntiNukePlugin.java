@@ -15,7 +15,7 @@ import io.anuke.mindustry.world.Tile;
 import java.lang.Math;
 
 public class AntiNukePlugin extends Plugin {
-    private final float radius = 12;
+    private final float radius = 17;
     private boolean kickPlayer = false;
 
     //register event handlers and create variables in the constructor
