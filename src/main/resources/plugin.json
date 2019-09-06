@@ -1,0 +1,7 @@
+{
+  "name": "AntiNukePlugin",
+  "author": "Fishbuilder",
+  "main": "reactorplugin.AntiNukePlugin",
+  "description": "A plugin that prevents building a nuclear reactor close to the core.",
+  "version": 1.0
+}
