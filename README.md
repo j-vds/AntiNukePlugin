@@ -1,3 +1,8 @@
+### Auto kick?
+If a player builds a reactor too close to the core. That reactor gets destroyed and the player gets a warning in chat. 
+Auto kick is by default disabled but you can enable it in the server console using `antinuke-kick <on/off>`.
+If this option is enabled the player gets kicked and a servermessage gets send to all the players on the server.
+
 ### Building a Jar 
 
 `gradlew jar` / `./gradlew jar`
