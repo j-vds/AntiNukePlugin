@@ -37,7 +37,7 @@ public class AntiNukePlugin extends Plugin {
                         if (kickPlayer){
                             //kick
                             Call.sendMessage(((Player) event.builder).name + "[green] kicked because he tried to nuke the core.");
-                            Call.onKick(((Player) event.builder).con.id, Packets.KickReason.kick);
+                            Call.onKick(((Player) event.builder).con, Packets.KickReason.kick);
 
                         } else {
                             //print msg
