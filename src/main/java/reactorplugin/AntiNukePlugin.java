@@ -32,7 +32,7 @@ public class AntiNukePlugin extends Plugin {
 
                     if (Math.sqrt(Math.pow(coreTile.x - event.tile.x, 2) + Math.pow(coreTile.y - event.tile.y, 2)) < (float) radius) {
                         Call.beginBreak(event.builder.getTeam(), event.tile.x, event.tile.y);
-                        Call.onDeconstructFinish(event.tile, Blocks.thoriumReactor);
+                        Call.onDeconstructFinish(event.tile, Blocks.thoriumReactor, ((Player) event.builder).id);
                         Log.info("Player {0} tried to nuke the core...", ((Player) event.builder).name);
                         if (kickPlayer){
                             //kick
