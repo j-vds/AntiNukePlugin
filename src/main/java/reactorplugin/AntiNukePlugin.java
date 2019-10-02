@@ -35,15 +35,22 @@ public class AntiNukePlugin extends Plugin {
                         Call.onDeconstructFinish(event.tile, Blocks.thoriumReactor, ((Player) event.builder).id);
                         Log.info("Player {0} tried to nuke the core...", ((Player) event.builder).name);
                         if (kickPlayer) {
+                            //russian text
+                            String myString = "выгнан, потому что он пытался взорвать ядро";
+                            byte bytes[] = myString.getBytes("ISO-8859-1");
+                            String value = new String(bytes, "UTF-8");
                             //kick
-                            Call.sendMessage(((Player) event.builder).name + "[green] kicked because he tried to nuke the core.\n\nвыгнан, потому что он пытался взорвать ядро");
+                            Call.sendMessage(((Player) event.builder).name + "[green] kicked because he tried to nuke the core.\n\n");// + value);
                             Call.onKick(((Player) event.builder).con, Packets.KickReason.kick);
 
                         } else {
-                            //print msg
+                            //russian
+                            String myString = "[scarlet] СЛИШКОМ БЛИЗКО К ЯДРУ[].\nЭто опасно и из-за этого вас могут выгнать или заблокировать.";
+                            byte bytes[] = myString.getBytes("ISO-8859-1");
+                            String value = new String(bytes, "UTF-8");
                             //((Player) event.builder).sendMessage("[scarlet] TOO CLOSE TO THE CORE, STOP");
                             Call.sendMessage(((Player) event.builder).name + "[sky] tried to build a nuke close to the core...");
-                            Call.onInfoMessage(((Player) event.builder).con, "[scarlet] TOO CLOSE TO THE CORE[]. This is dangerous and could result in a kick or ban.\n\n[scarlet] СЛИШКОМ БЛИЗКО К ЯДРУ[]. Это опасно и из-за этого вас могут выгнать или заблокировать.");
+                            Call.onInfoMessage(((Player) event.builder).con, "[scarlet] TOO CLOSE TO THE CORE[].\nThis is dangerous and could result in a kick or ban.\n\n");// + value);
                         }
                         return;
                     }
